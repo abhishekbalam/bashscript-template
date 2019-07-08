@@ -1,0 +1,89 @@
+#!/bin/bash
+
+# HELP SECTION
+
+help_msg(){
+
+	echo ""
+
+	if [ "${1+xxx}" ];
+		then
+		echo -e $1
+		echo ""
+	fi
+
+	echo -e "\e[36m\e[1m__My Script__\e[0m"
+	echo ""
+	echo "An example template for making your own bashscripts."
+	echo ""
+	echo -e "\e[38;5;222mUsage Instructions:\e[0m"
+
+	echo ""
+	echo -e " \e[92moption1\e[0m"
+	echo "Do something 1."
+
+	echo -e " \e[92moption2\e[0m"
+	echo "Do something 2."
+
+	echo -e " \e[92moption3\e[0m"
+	echo "Do something 3."
+
+	echo -e "\e[38;5;222mOptional args:\e[0m"
+	echo ""
+	echo -e " \e[92m-h\e[0m"
+	echo "		Help and documentation."
+	echo ""
+
+}
+
+help(){
+	help_msg
+	echo ""
+	echo -e "\e[1mHelp Text\e[0m"
+	echo -e "Lorem ipsum dolor sit amet, consectetur adipisicing elit.\nQuia libero voluptatum veniam laudantium corporis, illo enim"
+	echo -e "\nipsa ut voluptatem similique possimus delectus vitae quisquam.\nDistinctio molestias dolor,"
+	echo -e "\nsuscipit doloremque ipsa."
+	exit 1;
+
+}
+
+if [[ $# -eq 0 ]] ; then
+	help_msg
+	exit 1;
+fi
+
+option1_function(){
+	# Replace with custom logic
+	echo "option 1 used"
+}
+
+option2_function(){
+	# Replace with custom logic
+	echo "option 1 used"
+}
+
+option3_function(){
+	# Replace with custom logic
+	echo "option 1 used"
+}
+
+# OPTION SECTION
+
+while [ $# -gt 0 ]
+do
+		case "$1" in
+				option1) option1_function;;
+				option2) option2_function;;
+				option3) option3_function;;
+				# Add more if you like
+				-h)  help;;
+				*)
+				# help_msg "\e[31m\e[1mWrong arguments!\e[0m"
+				echo ""
+				echo -e "\e[31m\e[1mInvalid Option, use -h flag for help.\e[0m"
+				echo ""
+				exit 1;
+				break;
+ 		esac
+		shift
+done
