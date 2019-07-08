@@ -9,4 +9,4 @@ Instructions:
 5. \*Place the script in `~/bin`
 6. \*Add this to end of `~/.bashrc`: `export PATH=$PATH:~/bin`
 
-* -> Optional
+\* -> Optional Steps
