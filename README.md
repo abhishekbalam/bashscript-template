@@ -10,3 +10,5 @@ Instructions:
 6. \*Add this to end of `~/.bashrc`: `export PATH=$PATH:~/bin`
 
 \* -> Optional Steps
+
+Latest code here: https://git.abhishekbalam.xyz/abhishek/bashscript-template
